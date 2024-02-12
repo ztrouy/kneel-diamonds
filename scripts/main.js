@@ -1,9 +1,9 @@
 import { metalOptions } from './metalOptions.js'
-import { StyleOptions } from './styleOptions.js'
+import { styleOptions } from './styleOptions.js'
 
 const render = async () => {
     const metalOptionsHTML = await metalOptions()
-    const styleOptionsHTML = await StyleOptions()
+    const styleOptionsHTML = await styleOptions()
 
     const composedHTML = `
         <h1>Kneel Diamonds</h1>

@@ -1,4 +1,4 @@
-export const StyleOptions = async () => {
+export const styleOptions = async () => {
     const response = await fetch("http://localhost:8088/styles")
     const styles = await response.json()
 
