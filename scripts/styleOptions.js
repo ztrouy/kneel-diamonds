@@ -3,7 +3,7 @@ export const styleOptions = async () => {
     const styles = await response.json()
 
 
-    let optionsHTML = ""
+    let optionsHTML = "<h2>Styles</h2>"
     for (const style of styles) {
         optionsHTML += `<div><input type="radio" name="style" value="${style.id}" /> ${style.style}</div>`
     }
