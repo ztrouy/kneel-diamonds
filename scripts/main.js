@@ -16,7 +16,6 @@ const render = async () => {
             </section>
 
             <section class="choices__sizes options">
-                <h2>Sizes</h2>
                 ${sizeOptionsHTML}
             </section>
 
