@@ -12,7 +12,6 @@ const render = async () => {
 
         <article class="choices">
             <section class="choices__metals options">
-                <h2>Metals</h2>
                 ${metalOptionsHTML}
             </section>
 
