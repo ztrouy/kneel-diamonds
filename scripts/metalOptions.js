@@ -4,11 +4,11 @@ export const metalOptions = async () => {
     const response = await fetch("http://localhost:8088/metals")
     const metals = await response.json()
 
-    let optionsHTML = "<h2>Metals</h2>"
+    let optionsHTML = `<h2>Metals</h2><div class="content">`
 
     const divStringArray = metals.map(metal => {return `<div><input type="radio" name="metal" value="${metal.id}" /> ${metal.metal}</div>`})
 
-    optionsHTML += divStringArray.join("")
+    optionsHTML += `${divStringArray.join("")}</div>`
 
     return optionsHTML
 }
