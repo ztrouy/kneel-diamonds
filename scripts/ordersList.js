@@ -5,7 +5,7 @@ export const ordersList = async () => {
     const ordersArray = orders.map(order => {
         const orderPrice = order.metal.price + order.size.price + order.style.price
 
-        return `<div>Order #${order.id} cost $${orderPrice.toFixed(0)}</div>`
+        return `<div>Order #${order.id} cost $${orderPrice.toFixed(2)}</div>`
     })
 
     const ordersHTML = ordersArray.join("")
