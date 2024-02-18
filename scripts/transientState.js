@@ -20,6 +20,11 @@ export const setStyleId = (chosenStyle) => {
     console.log(transientState)
 }
 
+export const setJewelryId = (chosenJewelry) => {
+    transientState.jewelryId = chosenJewelry
+    console.log(transientState)
+}
+
 export const placeOrder = async () => {
     const postOptions = {
         method: "POST",
