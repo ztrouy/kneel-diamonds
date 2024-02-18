@@ -1,3 +1,5 @@
+import { setJewelryId } from "./transientState.js"
+
 export const jewelryOptions = async () => {
     const response = fetch("http://localhost:8088/jewelries")
     const jewelries = (await response).json()
@@ -12,3 +14,14 @@ export const jewelryOptions = async () => {
 
     return jewelryHTML
 }
+
+const handleJewelryChoice = (changeEvent) => {
+    const eventTarget = changeEvent.target
+    const eventTargetValue = parseInt(eventTarget.value)
+
+    if (eventTarget.name === "jewelry") {
+        setJewelryId(eventTargetValue)
+    }
+}
+
+document.addEventListener("change", handleJewelryChoice)
