@@ -1,8 +1,8 @@
 import { setJewelryId } from "./transientState.js"
 
 export const jewelryOptions = async () => {
-    const response = fetch("http://localhost:8088/jewelries")
-    const jewelries = (await response).json()
+    const response = await fetch("http://localhost:8088/jewelries")
+    const jewelries = await response.json()
 
     let jewelryHTML = "<div>"
 
