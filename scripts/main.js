@@ -1,3 +1,4 @@
+import { jewelryOptions } from './jewelryOptions.js'
 import { metalOptions } from './metalOptions.js'
 import { orderButton } from './orderButton.js'
 import { ordersList } from './ordersList.js'
@@ -8,6 +9,7 @@ const render = async () => {
     const metalOptionsHTML = await metalOptions()
     const sizeOptionsHTML = await sizeOptions()
     const styleOptionsHTML = await styleOptions()
+    const jewelryOptionsHTML = await jewelryOptions()
     const orderButtonHTML = await orderButton()
     const ordersListHTML = await ordersList()
 
@@ -26,6 +28,10 @@ const render = async () => {
             <section class="choices__styles options">
                 ${styleOptionsHTML}
             </section>
+        </article>
+
+        <article class="choices">
+            ${jewelryOptionsHTML}
         </article>
 
         <article class="order">
